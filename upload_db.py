@@ -29,7 +29,7 @@ class Quote(Document):
 
 # Відкриємо та завантажимо дані з файлів JSON
 # Відкриваємо файл авторів
-with open('authors.json', 'r') as f:
+with open('authors.json', 'r', encoding="utf-8") as f:
     authors_data = json.load(f)
 
 # Зберігаємо авторів в базі даних
@@ -43,7 +43,7 @@ for author_data in authors_data:
     author.save()
 
 # Завантажуємо дані цитат
-with open('quotes.json', 'r') as f:
+with open('quotes.json', 'r', encoding="utf-8") as f:
     quotes_data = json.load(f)
 
 # Зберігаємо цитати в базі даних
